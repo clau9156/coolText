@@ -28,6 +28,7 @@ function loop(cooltext, container) {
     // - set textContent to subsring of 0 to N
     // document.querySelector("#cooltext").textContent = cooltext.substring(0,n);
     const text = cooltext.split("");
+    console.log(text);
     // increment N
     // n++;
     // wait before calling loop() again
@@ -37,7 +38,7 @@ function loop(cooltext, container) {
     // }
 
     for(let n=0; n < text.length; n++){
-        console.log("hi");
+        console.log("is it looping?");
         const element = text[n];
         const span = document.createElement("span");
         // span.classList.add("cooltext", "letter");
@@ -45,13 +46,14 @@ function loop(cooltext, container) {
         if (element == " ") {
             span.classList.add("cooltext", "letter");
             span.style.setProperty("--delay", n);
-            container.append(span);
+            container.append(" ");
         } else{
             span.textContent = element;
             span.classList.add("cooltext", "letter");
             span.style.setProperty("--delay", n);
             container.append(span);
         }
+
         // const delay = 0.1 * n;
         // document.querySelector("span").style.setProperty("--delay", n)
     }
