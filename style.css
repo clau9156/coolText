@@ -1,2 +1,46 @@
+body {
+  background-color: black;
+}
+
+span {
+  display: inline-block;
+  /* padding: 1px;
+  width: auto;
+  opacity: 0; */
+}
+
 #cooltext {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  display: inline-block;
+  /* animation-fill-mode: forwards; */
+}
+
+.text {
+  --delay: 0s;
+}
+
+.letter {
+  /* opacity: 0; */
+  animation: letter 2s ease-in-out;
+  /* animation-fill-mode: forwards; */
+  animation-fill-mode: both;
+  animation-delay: calc(var(--delay) * 0.1s);
+}
+
+@keyframes letter {
+  0% {
+    opacity: 0;
+    transform: translateY(5vw);
+  }
+  /* 70% {
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-1);
+  } */
+  100% {
+    opacity: 100%;
+    transform: translateY(0vw);
+  }
 }
